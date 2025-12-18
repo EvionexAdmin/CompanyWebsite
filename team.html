@@ -48,14 +48,31 @@
         const App = () => {
             const [darkMode, setDarkMode] = useState(true);
             useEffect(() => {
-                if (darkMode) document.documentElement.classList.add('dark');
-                else document.documentElement.classList.remove('dark');
+                if (darkMode) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
             }, [darkMode]);
+
+            const Navbar = window.Navbar;
+            const RetroGrid = window.RetroGrid;
+            const TeamPage = window.TeamPage;
+            const Footer = window.Footer;
+
+            if (!Navbar || !RetroGrid || !TeamPage || !Footer) {
+                return <div className="min-h-screen bg-white dark:bg-slate-950 flex items-center justify-center text-slate-500">Loading...</div>;
+            }
+
             return (
                 <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'bg-slate-950 text-white' : 'bg-white text-slate-900'}`}>
                     <Navbar activePage="team" darkMode={darkMode} setDarkMode={setDarkMode} />
-                    <div className="fixed inset-0 z-0"><RetroGrid /></div>
-                    <main className="relative z-10 min-h-screen"><TeamPage /></main>
+                    <div className="fixed inset-0 z-0">
+                        <RetroGrid />
+                    </div>
+                    <main className="relative z-10 min-h-screen">
+                        <TeamPage />
+                    </main>
                     <Footer />
                 </div>
             );
