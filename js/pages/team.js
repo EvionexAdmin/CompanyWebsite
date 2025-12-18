@@ -11,9 +11,9 @@ window.TeamPage = () => (
 
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl px-4">
                 {[
-                    { name: "Atharva Shinde", role: "Director & Co-Founder", delay: 0, image: "Atharva_suit.png" },
-                    { name: "Kedar Navsariwala", role: "Director & Co-Founder", delay: 100, image: "Kedar_photo.jpg" },
-                    { name: "Mrunal Samant", role: "Director & Co-Founder", delay: 200, image: "Mrunal_photo1.jfif" }
+                    { name: "Atharva Shinde", role: "Director & Co-Founder", delay: 0, image: "Atharva_suit.png", description: "Multi-disciplined professional with strong background in Bio-informatics and an undying passion for Aging research." },
+                    { name: "Kedar Navsariwala", role: "Director & Co-Founder", delay: 100, image: "Kedar_photo.jpg", description: "Molecular biologist turned Machine Learning Engineer, loves to design AI tools to help researchers and clinicians." },
+                    { name: "Mrunal Samant", role: "Director & Co-Founder", delay: 200, image: "Mrunal_photo1.jfif", description: "Passionate about technology and leadership, driving Evionex to new heights in the global market through her expertise in management." }
                 ].map((member, idx) => (
                     <div
                         key={idx}
@@ -30,7 +30,7 @@ window.TeamPage = () => (
                         <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">{member.name}</h3>
                         <p className="text-cyan-600 dark:text-cyan-400 font-medium mb-4">{member.role}</p>
                         <p className="text-slate-600 dark:text-slate-400 text-sm mb-6">
-                            Passionate about technology and leadership, driving Evionex to new heights in the global market.
+                            {member.description}
                         </p>
                         <div className="flex justify-center gap-4 text-slate-400">
                             <Linkedin size={20} className="hover:text-cyan-600 cursor-pointer transition-colors" />
