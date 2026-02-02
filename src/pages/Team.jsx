@@ -1,9 +1,31 @@
 import React from 'react';
 import { Linkedin, Twitter } from 'lucide-react';
+import Section from '../components/Section';
 
-window.TeamPage = () => {
-    const Section = window.Section;
-    if (!Section) return null;
+const Team = () => {
+    const members = [
+        {
+            name: "Atharva Shinde",
+            role: "Director & Co-Founder",
+            delay: 0,
+            image: "Atharva_suit.png",
+            description: "Multi-disciplined professional with strong background in Bio-informatics and an undying passion for Aging research."
+        },
+        {
+            name: "Kedar Navsariwala",
+            role: "Director & Co-Founder",
+            delay: 100,
+            image: "Kedar_photo.jpg",
+            description: "Molecular biologist turned Machine Learning Engineer, loves to design AI tools to help researchers and clinicians."
+        },
+        {
+            name: "Mrunal Samant",
+            role: "Director & Co-Founder",
+            delay: 200,
+            image: "Mrunal_photo1.jfif",
+            description: "Passionate about technology and leadership, driving Evionex to new heights in the global market through her expertise in management."
+        }
+    ];
 
     return (
         <div className="animate-fade-in pt-24">
@@ -14,11 +36,7 @@ window.TeamPage = () => {
                 </div>
 
                 <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl px-4">
-                    {[
-                        { name: "Atharva Shinde", role: "Director & Co-Founder", delay: 0, image: "Atharva_suit.png", description: "Multi-disciplined professional with strong background in Bio-informatics and an undying passion for Aging research." },
-                        { name: "Kedar Navsariwala", role: "Director & Co-Founder", delay: 100, image: "Kedar_photo.jpg", description: "Molecular biologist turned Machine Learning Engineer, loves to design AI tools to help researchers and clinicians." },
-                        { name: "Mrunal Samant", role: "Director & Co-Founder", delay: 200, image: "Mrunal_photo1.jfif", description: "Passionate about technology and leadership, driving Evionex to new heights in the global market through her expertise in management." }
-                    ].map((member, idx) => (
+                    {members.map((member, idx) => (
                         <div
                             key={idx}
                             className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg text-center border-t-4 border-cyan-500 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20"
@@ -47,3 +65,5 @@ window.TeamPage = () => {
         </div>
     );
 };
+
+export default Team;

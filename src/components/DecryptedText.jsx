@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-window.DecryptedText = ({ text, className }) => {
+const DecryptedText = ({ text, className }) => {
     const [displayText, setDisplayText] = useState('');
     const [isScrambling, setIsScrambling] = useState(true);
     const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
@@ -29,3 +29,5 @@ window.DecryptedText = ({ text, className }) => {
         </span>
     );
 };
+
+export default DecryptedText;

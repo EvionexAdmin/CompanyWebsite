@@ -1,7 +1,9 @@
 import React from 'react';
 import { MapPin, Mail, Briefcase } from 'lucide-react';
+import Section from '../components/Section';
+import Button from '../components/Button';
 
-window.ContactPage = () => (
+const Contact = () => (
     <div className="animate-fade-in pt-24">
         <Section>
             <div className="container mx-auto max-w-6xl">
@@ -93,3 +95,5 @@ window.ContactPage = () => (
         </Section>
     </div>
 );
+
+export default Contact;

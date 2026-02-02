@@ -1,6 +1,8 @@
 import React from 'react';
+import Section from '../components/Section';
+import SpotlightWrapper from '../components/SpotlightWrapper';
 
-window.WhoWeArePage = () => (
+const WhoWeAre = () => (
     <div className="animate-fade-in pt-24">
         <Section>
             <div className="container mx-auto">
@@ -36,7 +38,7 @@ window.WhoWeArePage = () => (
                                 <div>
                                     <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">Our Mission</h3>
                                     <p>
-                                        To empower India’s research and education communities through intelligent digital transformation. We strive to break down barriers to innovation by providing accessible, state-of-the-art platforms that modernize laboratories and classrooms.
+                                        To empower India's research and education communities through intelligent digital transformation. We strive to break down barriers to innovation by providing accessible, state-of-the-art platforms that modernize laboratories and classrooms.
                                     </p>
                                 </div>
 
@@ -67,3 +69,5 @@ window.WhoWeArePage = () => (
         </Section>
     </div>
 );
+
+export default WhoWeAre;

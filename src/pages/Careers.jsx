@@ -1,7 +1,9 @@
 import React from 'react';
 import { Users } from 'lucide-react';
+import Section from '../components/Section';
+import Button from '../components/Button';
 
-window.CareersPage = () => (
+const Careers = () => (
     <div className="animate-fade-in pt-24">
         <Section>
             <div className="container mx-auto">
@@ -30,3 +32,5 @@ window.CareersPage = () => (
         </Section>
     </div>
 );
+
+export default Careers;
